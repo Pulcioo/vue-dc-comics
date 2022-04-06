@@ -4,35 +4,10 @@
       <img src="../assets/dc-logo.png" alt="Logo" />
       <div class="header-menu">
         <ul>
-          <li>
-            <a href="#"> <strong>CHARACTERS</strong> </a>
-          </li>
-          <li>
-            <a href="#"><strong> COMICS</strong></a>
-          </li>
-          <li>
-            <a href="#"><strong> MOVIES</strong></a>
-          </li>
-          <li>
-            <a href="#"><strong> TV</strong></a>
-          </li>
-          <li>
-            <a href="#"><strong> GAMES</strong></a>
-          </li>
-          <li>
-            <a href="#"><strong>COLLECTIBLES</strong> </a>
-          </li>
-          <li>
-            <a href="#"><strong>VIDEOS</strong> </a>
-          </li>
-          <li>
-            <a href="#"><strong>FANS</strong> </a>
-          </li>
-          <li>
-            <a href="#"><strong>NEWS</strong> </a>
-          </li>
-          <li>
-            <a href="#"><strong>SHOP</strong> </a>
+          <li v-for="item in menuItem" :key="item.message">
+            <a href="#"
+              ><strong>{{ item.message }}</strong></a
+            >
           </li>
         </ul>
       </div>
@@ -43,6 +18,22 @@
 <script>
 export default {
   name: "headerComponent",
+  data() {
+    return {
+      menuItem: [
+        { message: "CHARACTER" },
+        { message: "COMICS" },
+        { message: "MOVIES" },
+        { message: "TV" },
+        { message: "GAMES" },
+        { message: "COLLECTIBLES" },
+        { message: "VIDEOS" },
+        { message: "FANS" },
+        { message: "NEWS" },
+        { message: "SHOP" },
+      ],
+    };
+  },
 };
 </script>
 
