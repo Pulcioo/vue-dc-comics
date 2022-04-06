@@ -1,39 +1,41 @@
 <template>
   <header>
-    <img src="../assets/dc-logo.png" alt="Logo" />
-    <div class="header-menu">
-      <ul>
-        <li>
-          <a href="#"> <strong>CHARACTERS</strong> </a>
-        </li>
-        <li>
-          <a href="#"><strong> COMICS</strong></a>
-        </li>
-        <li>
-          <a href="#"><strong> MOVIES</strong></a>
-        </li>
-        <li>
-          <a href="#"><strong> TV</strong></a>
-        </li>
-        <li>
-          <a href="#"><strong> GAMES</strong></a>
-        </li>
-        <li>
-          <a href="#"><strong>COLLECTIBLES</strong> </a>
-        </li>
-        <li>
-          <a href="#"><strong>VIDEOS</strong> </a>
-        </li>
-        <li>
-          <a href="#"><strong>FANS</strong> </a>
-        </li>
-        <li>
-          <a href="#"><strong>NEWS</strong> </a>
-        </li>
-        <li>
-          <a href="#"><strong>SHOP</strong> </a>
-        </li>
-      </ul>
+    <div id="header-container">
+      <img src="../assets/dc-logo.png" alt="Logo" />
+      <div class="header-menu">
+        <ul>
+          <li>
+            <a href="#"> <strong>CHARACTERS</strong> </a>
+          </li>
+          <li>
+            <a href="#"><strong> COMICS</strong></a>
+          </li>
+          <li>
+            <a href="#"><strong> MOVIES</strong></a>
+          </li>
+          <li>
+            <a href="#"><strong> TV</strong></a>
+          </li>
+          <li>
+            <a href="#"><strong> GAMES</strong></a>
+          </li>
+          <li>
+            <a href="#"><strong>COLLECTIBLES</strong> </a>
+          </li>
+          <li>
+            <a href="#"><strong>VIDEOS</strong> </a>
+          </li>
+          <li>
+            <a href="#"><strong>FANS</strong> </a>
+          </li>
+          <li>
+            <a href="#"><strong>NEWS</strong> </a>
+          </li>
+          <li>
+            <a href="#"><strong>SHOP</strong> </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 </template>
@@ -46,10 +48,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-header {
+#header-container {
+  width: 80%;
+  margin: 15px auto;
   display: flex;
-  justify-content: space-around;
-  margin: 15px;
+  justify-content: space-between;
 
   img {
     width: 80px;
@@ -72,7 +75,7 @@ header {
           font-size: 14px;
 
           &:hover {
-            color: blue;
+            color: #0282f9;
           }
         }
       }
