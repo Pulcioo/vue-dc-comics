@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header :links="menuItem" />
-    <Main />
+    <Main :series="series" />
     <Info />
     <Footer />
   </div>
@@ -13,10 +13,14 @@ import Main from "./components/Main.vue";
 import Info from "./components/Info.vue";
 import Footer from "./components/Footer.vue";
 
+// data
+import series from "@/assets/data/dc-comics";
+
 export default {
   name: "App",
   data() {
     return {
+      series,
       menuItem: [
         { message: "CHARACTER" },
         { message: "COMICS" },

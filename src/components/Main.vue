@@ -1,16 +1,22 @@
 <template>
   <main>
     <div id="main-container">
-      <div class="content">
-        <h2>--- Content goes here ---</h2>
-      </div>
+      <SerieItem v-for="(item, index) in series" :key="index" :serie="item" />
     </div>
   </main>
 </template>
 
 <script>
+import SerieItem from "@/components/SerieItem.vue";
+
 export default {
   name: "mainComponent",
+  props: {
+    series: Array,
+  },
+  components: {
+    SerieItem,
+  },
 };
 </script>
 
