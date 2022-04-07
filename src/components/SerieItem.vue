@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <img :src="serie.thumb" />
+    <img :src="serie.thumb" alt="cover" />
     <h2>{{ serie.series }}</h2>
   </div>
 </template>
