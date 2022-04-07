@@ -4,7 +4,7 @@
       <img src="../assets/dc-logo.png" alt="Logo" />
       <div class="header-menu">
         <ul>
-          <li v-for="item in menuItem" :key="item.message">
+          <li v-for="item in links" :key="item.message">
             <a href="#"
               ><strong>{{ item.message }}</strong></a
             >
@@ -18,21 +18,8 @@
 <script>
 export default {
   name: "headerComponent",
-  data() {
-    return {
-      menuItem: [
-        { message: "CHARACTER" },
-        { message: "COMICS" },
-        { message: "MOVIES" },
-        { message: "TV" },
-        { message: "GAMES" },
-        { message: "COLLECTIBLES" },
-        { message: "VIDEOS" },
-        { message: "FANS" },
-        { message: "NEWS" },
-        { message: "SHOP" },
-      ],
-    };
+  props: {
+    links: Array,
   },
 };
 </script>
@@ -44,6 +31,7 @@ export default {
   margin: 15px auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   img {
     width: 80px;
@@ -55,6 +43,7 @@ export default {
 
     ul {
       display: flex;
+      flex-wrap: wrap;
 
       li {
         list-style-type: none;

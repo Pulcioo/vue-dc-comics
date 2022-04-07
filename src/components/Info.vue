@@ -65,10 +65,11 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   padding: 40px 0;
 
   li {
-    margin: 0 20px;
+    margin: 10px 20px;
 
     a {
       text-decoration: none;

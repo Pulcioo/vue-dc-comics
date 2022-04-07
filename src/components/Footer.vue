@@ -158,6 +158,7 @@ footer {
   width: 80%;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
 
   .footer-left-nav,
   .footer-center-nav,
@@ -195,10 +196,12 @@ ul {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 30px 0;
 
   button {
     padding: 10px;
+    margin-bottom: 5px;
     background: none;
     color: white;
     border: none;
@@ -208,6 +211,7 @@ ul {
   .follow-us {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     h2 {
       margin-right: 15px;
@@ -216,6 +220,7 @@ ul {
 
     .icon-list {
       display: flex;
+      flex-wrap: wrap;
 
       li {
         margin: auto 8px;
