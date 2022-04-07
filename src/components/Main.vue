@@ -1,7 +1,10 @@
 <template>
   <main>
+    <div class="jumbotron"></div>
     <div id="main-container">
-      <SerieItem v-for="(item, index) in series" :key="index" :serie="item" />
+      <div class="item-container">
+        <SerieItem v-for="(item, index) in series" :key="index" :serie="item" />
+      </div>
     </div>
   </main>
 </template>
@@ -26,13 +29,21 @@ main {
   color: white;
   background: black;
 
+  .jumbotron {
+    background-image: url(@/assets/jumbotron.jpg);
+    background-size: cover;
+    height: 400px;
+    max-width: 100vw;
+  }
+
   #main-container {
     width: 80%;
     margin: 0 auto;
-  }
-}
 
-h2 {
-  padding: 40px 0;
+    .item-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
 }
 </style>
